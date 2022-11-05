@@ -1,10 +1,6 @@
 import 'dotenv/config'
+import App from './app';
 
-import express from 'express';
-
-const PORT= process.env.APP_PORT;
-
-const app =express();
-app.listen(3000,()=>{
-    console.log(`Server runnig in port: ${PORT}`);
-});
+//const PORT= process.env.APP_PORT || 3001;
+//Iniciar la aplicacion
+App.listen(process.env.APP_PORT as unknown as number | 3001)
